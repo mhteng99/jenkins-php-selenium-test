@@ -6,9 +6,9 @@ pipeline {
 				stage('Deploy') {
 					agent any
 					steps {
-						bat './jenkins/scripts/deploy.sh'
+						bash './jenkins/scripts/deploy.sh'
 						input message: 'Finished using the web site? (Click "Proceed" to continue)'
-						bat './jenkins/scripts/kill.sh'
+						bash './jenkins/scripts/kill.sh'
 					}
 				}
 				stage('Headless Browser Test') {
