@@ -14,8 +14,8 @@ pipeline {
 				stage('Headless Browser Test') {
 					agent any
 					steps {
-						powershell 'mvn -B -DskipTests clean package'
-						powershell 'mvn test'
+						bat 'mvn -B -DskipTests clean package'
+						bat 'mvn test'
 					}
 					post {
 						always {
