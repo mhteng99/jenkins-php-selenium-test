@@ -15,7 +15,7 @@ pipeline {
 					agent any
 					steps {
 						bat 'mvn -B -DskipTests clean package'
-						bat 'mvn test'
+						sh 'mvn test'
 					}
 					post {
 						always {
